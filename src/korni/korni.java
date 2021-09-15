@@ -26,21 +26,27 @@ public static double[] calc(double a, double b, double c) {
         Scanner scan=new Scanner(System.in);
         boolean running = true;
         while(running){
-            String s;
-            System.out.println("Введите A ");
-            s=scan.next(); 
-            double A=Double.parseDouble(s);  //string -> integer
-            System.out.println("Введите B ");
-            s=scan.next();
-            double B=Double.parseDouble(s);  //string -> integer
-            System.out.println("Введите C ");
-            s=scan.next(); 
-            double C=Double.parseDouble(s);  //string -> integer
-            double[] result = calc(A,B,C);
-            if (result!=null)
-                System.out.println("Корни: x1="+result[0] +"; " + "x2= "+result[1]);
-            else
-                System.out.println("Корней нет ");
+            try {
+                String s;
+                System.out.println("Введите A ");
+                s=scan.next(); 
+                double A=Double.parseDouble(s);  //string -> integer
+                System.out.println("Введите B ");
+                s=scan.next();
+                double B=Double.parseDouble(s);  //string -> integer
+                System.out.println("Введите C ");
+                s=scan.next(); 
+                double C=Double.parseDouble(s);  //string -> integer
+                double[] result = calc(A,B,C);
+                if (result!=null)
+                    System.out.println("Корни: x1="+result[0] +"; " + "x2= "+result[1]);
+                else
+                    System.out.println("Корней нет ");
+                }
+                catch (NumberFormatException e) {
+                    System.out.println("Неправильный формат ввода, повторите ещё");
+               // continue;
+                }
             }
         }
     }
