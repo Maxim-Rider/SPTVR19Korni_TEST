@@ -30,13 +30,13 @@ public static double[] calc(double a, double b, double c) {
                 String s;
                 System.out.println("Введите A ");
                 s=scan.next(); 
-                double A=Double.parseDouble(s);  //string -> integer
+                double A=Double.parseDouble(s);
                 System.out.println("Введите B ");
                 s=scan.next();
-                double B=Double.parseDouble(s);  //string -> integer
+                double B=Double.parseDouble(s);
                 System.out.println("Введите C ");
                 s=scan.next(); 
-                double C=Double.parseDouble(s);  //string -> integer
+                double C=Double.parseDouble(s);
                 double[] result = calc(A,B,C);
                 if (result!=null)
                     System.out.println("Корни: x1="+result[0] +"; " + "x2= "+result[1]);
